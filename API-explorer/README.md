@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="100" alt="Movie Explorer Logo" src="https://github.com/user-attachments/assets/985bc5ef-5079-4269-9c6f-1fbdaeca2465" />
+  <img width="400" alt="Movie Explorer Logo" src="https://github.com/user-attachments/assets/985bc5ef-5079-4269-9c6f-1fbdaeca2465" />
 
 
   # 🎬 Movie Explorer
