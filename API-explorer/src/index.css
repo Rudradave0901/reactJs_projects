@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-netflix-red: #E50914;
+  --color-netflix-black: #141414;
+  --color-netflix-dark: #000000;
+
+  --color-primary-500: #E50914;
+  --color-background: #141414;
+}
+
+@layer base {
+  body {
+    @apply bg-netflix-black text-white antialiased min-h-screen font-sans;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .netflix-gradient-bottom {
+    background: linear-gradient(to top, rgba(20, 20, 20, 1) 0%, rgba(20, 20, 20, 0) 100%);
+  }
+
+  .netflix-gradient-left {
+    background: linear-gradient(to right, rgba(20, 20, 20, 0.9) 0%, rgba(20, 20, 20, 0) 100%);
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Custom Swiper Styles for Netflix Look */
+.movie-swiper {
+  overflow: visible !important;
+}
+
+/* Removed default Swiper CSS overrides since we use custom buttons now */
+
+.movie-swiper .swiper-pagination {
+  display: none;
+}
