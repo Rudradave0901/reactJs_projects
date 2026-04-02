@@ -1,5 +1,6 @@
 <div align="center">
-  <img src="https://via.placeholder.com/150x150?text=Movie+Explorer" alt="Movie Explorer Logo" width="100" />
+  <img width="100" alt="Movie Explorer Logo" src="https://github.com/user-attachments/assets/985bc5ef-5079-4269-9c6f-1fbdaeca2465" />
+
 
   # 🎬 Movie Explorer
 
@@ -51,12 +52,14 @@ This project leverages exceptional modern tooling for maximum speed, accessibili
 ### Homepage Dashboard
 > *Showcasing Hero section, Top Trending Carousel, and beautiful typography.*
 > 
-> ![Homepage UI]() <!-- Replace with: ![Homepage UI](/public/home-preview.png) -->
+> <img width="1882" height="918" alt="image" src="https://github.com/user-attachments/assets/6828f126-9f7b-46ed-905d-bc778b4b9707" />
+
 
 ### Deep Dive: Movie Detail Page
 > *Detailed metadata including posters, descriptive backgrounds, and rating features.*
 > 
-> ![Movie Detail Page]() <!-- Replace with: ![Movie Detail Page](/public/detail-preview.png) -->
+> <img width="1882" height="918" alt="image" src="https://github.com/user-attachments/assets/c03f67b6-9b36-4ba6-9930-d4db34d29aaa" />
+
 
 ### Dynamic Search & Filter
 > *Smooth category filters for quick browsing.*
