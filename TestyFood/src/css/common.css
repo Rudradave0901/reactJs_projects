@@ -1,0 +1,212 @@
+/* =========================
+   GLOBAL VARIABLES & BASE STYLES
+========================= */
+:root {
+    --primary: #E60000;
+    --primary-hover: #CC0000;
+    --bg-main: #ffffff;
+    --bg-surface: #f9f9f9;
+    --border-light: #E7E8E8;
+    --text-main: #131313;
+    --text-muted: #797979;
+    --text-subtle: #5A5A5A;
+    --accent: #FEC223;
+
+    /* Backgrounds */
+    --footer-background: url(/backgrounds/footer-background.png);
+    --section-shape-top: url(/backgrounds/section-shape-top.svg);
+    --section-shape-bottom: url(/backgrounds/section-shape-bottom.svg);
+    --common-bg-img: url(/backgrounds/common-background.png);
+    --inner-banner-bg: url(/backgrounds/inner-banner-background.png);
+    --bg-banner-img: url(/backgrounds/home-banner-background.png);
+
+    /* Fonts */
+    --font-family-outfit: 'Outfit', sans-serif;
+    --font-family-carter: 'Carter One', cursive;
+}
+
+body.dark {
+    --primary: #E60000;
+    --primary-hover: #FF3333;
+    --bg-main: #131313;
+    --bg-surface: #262626;
+    --border-light: #3D3E3E;
+    --text-main: #E7E8E8;
+    --text-muted: #A0A0A0;
+    --text-subtle: #C0C0C0;
+    --accent: #FEC223;
+}
+
+/* =========================
+   BASE TYPOGRAPHY & BODY
+========================= */
+
+::-moz-selection {
+  color: red;
+  background: yellow;
+}
+
+::selection {
+  color: red;
+  background: yellow;
+}
+
+
+body {
+    font-family: var(--font-family-outfit);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-carter);
+}
+
+@layer components {
+
+    /*=====================================
+        Button CSS
+    =====================================*/
+    /* -------- Button Common CSS -------- */
+    .btn {
+        cursor: pointer;
+        border: 1px solid inherit;
+        padding: 0.9rem 2rem;
+        margin: 0;
+        position: relative;
+        display: inline-block;
+        border-radius: 500px;
+        overflow: hidden;
+    }
+
+    .btn span {
+        position: relative;
+        z-index: 10;
+        transition: color 0.4s;
+    }
+
+    .btn::before,
+    button::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .btn::before {
+        content: "";
+        width: 120%;
+        left: -10%;
+        transform: skew(30deg);
+        transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+    }
+
+    .btn:hover::before {
+        transform: translate3d(100%, 0, 0);
+    }
+
+    /* -------- Primary Yellow Button -------- */
+    .btn-primary {
+        background: #E60000;
+    }
+
+    .btn-primary::before {
+        background: #FEC223;
+    }
+
+    .btn-primary:hover span {
+        color: #FFFFFF;
+    }
+
+    /* -------- Secondary Outline Button -------- */
+    .btn-secondary {
+        background: #E60000;
+        border: 1px solid #898989;
+    }
+
+    .btn-secondary::before {
+        background: #FFFFFF;
+    }
+
+    .btn-secondary:hover span {
+        color: #FFFFFF;
+    }
+
+    /* -------- Secondary Hover Dark Button -------- */
+    .btn-secondary.dark {
+        background: #000000;
+    }
+
+    /* -------- Danger Red Button -------- */
+    .btn-danger {
+        background: #FEC223;
+        color: #FFFFFF;
+    }
+
+    .btn-danger::before {
+        background: #E60000;
+    }
+
+    .btn-danger:hover span {
+        color: #000000;
+    }
+
+    /* -------- Danger Red Reverse Button -------- */
+    .btn-danger.reverse {
+        background: #E60000;
+        color: #FFFFFF;
+        border: 1px solid #bebebe;
+    }
+
+    .btn-danger.reverse:hover {
+        border: 1px solid #E60000;
+    }
+
+    .btn-danger.reverse.active {
+        border-color: #E60000;
+    }
+
+    .btn-danger.reverse:not(.active) span {
+        color: #131313;
+    }
+
+    .btn-danger.reverse::before {
+        background: #ffffff;
+    }
+
+    .btn-danger.reverse:hover span {
+        color: #FFFFFF;
+    }
+
+    /*=====================================
+        Section Title - Paragraph
+    =====================================*/
+    .section-title {
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 1.17;
+        color: var(--text-main);
+        margin-bottom: 20px;
+    }
+
+    .section-title span {
+        color: #E60000;
+    }
+
+    .content-pera {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: var(--text-main);
+        letter-spacing: 0.5px;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,66 @@
+/*=====================================
+    Form Control CSS
+=====================================*/
+.input-group-wrap:not(.mb-0) { margin-bottom: 20px; }
+.input-group-wrap label { font-size: 18px; font-weight: 400; line-height: 1.5; letter-spacing: 0.2px; color: var(--text-black-300); margin-bottom: 5px; }
+.input-group-wrap .form-control { font-size: 18px; font-weight: 400; line-height: 1.5; letter-spacing: 0.2px; color: #131313; padding: 11px 30px; border: 1px solid #E7E8E8; background: #F5F5F5; border-radius: 30px; }
+.input-group-wrap textarea.form-control { min-height: 150px; border-radius: 20px; resize: none; }
+.input-group-wrap .form-control:hover,
+.input-group-wrap .form-control:focus { outline: none !important; text-decoration: none !important; box-shadow: none !important; border-color: #FEC223 !important; }
+
+/*=====================================
+    No Scrool When Menu Open
+=====================================*/
+.menuopen { overflow: hidden; }
+.menuopen:before {content: ""; position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.4); width: 100%; height: 100vh; z-index: 9; }
+
+/*=====================================
+    Hamburger Menu CSS
+=====================================*/
+.hamburger-menu {position: relative; width: 24px; height: 22px; transition: .5s ease-in-out; cursor: pointer; }
+.hamburger-menu span:nth-child(1) {top: 2px; }
+.hamburger-menu span:nth-child(2), .hamburger-menu span:nth-child(3) {top: 10px; }
+.hamburger-menu span:nth-child(4) {top: 18px; }
+.hamburger-menu span {display: block; position: absolute; height: 2px; width: 100%; background: #363637; border-radius: 10px; opacity: 1; left: 0; transition: .25s ease-in-out; }
+.hamburger-menu.open span:nth-child(1) {top: 18px; width: 0; left: 50%; }
+.hamburger-menu.open span:nth-child(2) {transform: rotate(45deg); }
+.hamburger-menu.open span:nth-child(3) {transform: rotate(-45deg); }
+.hamburger-menu.open span:nth-child(4) {top: 18px; width: 0; left: 50%; }
+
+/* =========================
+   HEADER STYLES
+========================= */
+.header-section.fixed .navbar-wrapper>div { padding: 10px 0; }
+.header-section .nav-item .nav-link:hover span { color: var(--primary); }
+.header-section.fixed > .top-header { display: none; }
+.header-section.fixed .navbar-wrapper>div img { height: 50px; }
+.header-section .nav-item .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; background: #E60000; transition: all 0.3s ease-in-out; bottom: 0; }
+.header-section .nav-item .nav-link:hover::after { width: 80%; }
+
+/* =========================
+   FOOTER MAIN SECTION
+========================= */
+.footer-section { background: var(--footer-background) no-repeat; background-size: cover; background-position: center top; position: relative; background-color: #F8F8F8; padding-top: 90px; margin-top: 50px; }
+
+/* ==================================
+       Header Common Styles
+==================================== */
+@keyframes slideDown {
+   from { transform: translateY(-100%); }
+   to { transform: translateY(0); }
+}
+
+.contact-icon-wrapper img,
+.contact-icon-wrapper svg { filter: brightness(0) invert(1); }
+
+/* ==================================
+       Responsive Header
+==================================== */
+@media only screen and (max-width: 1024px) {
+   /*--- Header Section ---*/
+   .header-section .site-navigation {position: fixed; top: 0; left: -325px; z-index: 9999; width: 320px; max-width: calc(100% - 45px); height: 100vh; padding: 30px; margin: 0; background: #ffffff; list-style: none; overflow-x: scroll; transition: all 0.35s; box-shadow: 4px 0px 4px 0px rgba(0,0,0,0.2); }
+   .header-section .site-navigation.open {left: 0px; }
+   .header-section .site-navigation .nav-item { margin: 0; }
+   .header-section .site-navigation .nav-item .nav-link {padding: 15px 0; }
+   .header-section .nav-item .nav-link::after { content: none; }
+}
